@@ -1,0 +1,41 @@
+name,statement_text,section_level_0,section_level_1,section_level_2,outcome measure
+input\Prot_000,"The primary objective of the study is to compare the efficacy of brigatinib to that of crizotinib in ALK+ locally advanced or metastatic NSCLC patients naive to ALK inhibitors, as evidenced by PFS",objectives-endpoints-section,primary-objective,efficacy-objective,PFS
+input\Prot_000,"PFS, as assessed by the BIRC, per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1",objectives-endpoints-section,primary-objective,efficacy-objective,PFS
+input\Prot_000,"To compare the efficacy of brigatinib to that of crizotinib, as evidenced by confirmed ORR, time to/duration of response, disease control rate (DCR), and Overall Survival (OS)",objectives-endpoints-section,secondary-objective,efficacy-objective,"Disease control rate (DCR), Overall Survival (OS)"
+input\Prot_000,"To compare the efficacy in the CNS of brigatinib to that of crizotinib, as evidenced by intracranial response and intracranial PFS in those patients with intracranial CNS metastases at baseline",objectives-endpoints-section,secondary-objective,efficacy-objective,PFS
+input\Prot_000,"To assess patient-reported symptoms and health-related quality of life (HRQoL) with the European Organisation for Research and Treatment of Cancer (EORTC) Quality of Life Questionnaire (QLQ)-C30 (v3.0) and its lung cancer module, QLQ-LC13 (v3.0) in patients treated with brigatinib compared to those treated with crizotinib",objectives-endpoints-section,secondary-objective,efficacy-objective,Quality of life
+input\Prot_000,To assess the safety and tolerability of brigatinib in comparison with crizotinib ,objectives-endpoints-section,secondary-objective,safety-and-tolerability-objective,Safety and tolerability
+input\Prot_000,To determine PK parameters of brigatinib through population PK modeling,objectives-endpoints-section,secondary-objective,pharmacokinetic-objective,Pharmacokinetics
+input\Prot_000,"Confirmed ORR, as assessed by the BIRC, per RECIST v1.1",objectives-endpoints-section,secondary-objective,efficacy-objective,ORR
+input\Prot_000,"Confirmed intracranial ORR, as assessed by the BIRC",objectives-endpoints-section,secondary-objective,efficacy-objective,ORR
+input\Prot_000,"Intracranial PFS, as assessed by the BIRC",objectives-endpoints-section,secondary-objective,efficacy-objective,PFS
+input\Prot_000,"Duration of response, as assessed by the BIRC",objectives-endpoints-section,secondary-objective,efficacy-objective,Duration of response
+input\Prot_000,"Time to response, as assessed by the BIRC",objectives-endpoints-section,secondary-objective,efficacy-objective,Time to response
+input\Prot_000,"Disease control rate, as assessed by the BIRC",objectives-endpoints-section,secondary-objective,efficacy-objective,Disease control rate
+input\Prot_000,"Change from baseline scores in global health status/quality of life (QOL) assessed with the EORTC QLQ-C30 (v3.0), and time-to-deterioration in dyspnea assessed with the EORTC QLQ-LC13 (v3.0)",objectives-endpoints-section,secondary-objective,efficacy-objective,Quality of life
+input\Prot_000,"To assess confirmed ORR on brigatinib in patients who crossover to brigatinib from Arm B (crizotinib); and to assess PFS, from the first dose of brigatinib, in patients who crossover to brigatinib from Arm B ",objectives-endpoints-section,exploratory-objective,efficacy-objective,ORR
+input\Prot_000,To explore relationship of brigatinib exposure with both efficacy and safety,objectives-endpoints-section,exploratory-objective,efficacy-objective,"Safety, efficacy"
+input\Prot_000,"Confirmed ORR for brigatinib, as assessed by the BIRC, per RECIST v1.1, in patients who crossover from Arm B (crizotinib)",objectives-endpoints-section,exploratory-objective,efficacy-objective,ORR
+input\Prot_000,"PFS from the first dose of brigatinib, as assessed by the BIRC, per RECIST v1.1, in  patients who crossover from Arm B (crizotinib)",objectives-endpoints-section,exploratory-objective,efficacy-objective,PFS
+input\Prot_001,The primary objective is to assess clinical benefit rate after 24 weeks of treatment with PDR001+LAG525 based on local investigator assessment.,objectives-endpoints-section,primary-objective,efficacy-objective,Clinical benefit rate
+input\Prot_001,"Assess CBR at 24 weeks of PDR001+LAG525 by tumor type in multiple solid and lymphoma
+
+For patients with solid tumors the assessment criteria will be RECIST 1.1 and will include responses of CR or PR or SD. For 
+lymphoma, assessment criteria will be the Revised Response Criteria for Malignant Lymphoma, (Cheson et al 2007).",objectives-endpoints-section,primary-objective,efficacy-objective,CBR
+input\Prot_001,"To assess Overall Response (OR) of Partial Response (PR) or Complete Response (CR) based on local investigator 
+assessment.",objectives-endpoints-section,secondary-objective,efficacy-objective,"Overall Response, Partial Response, Complete Response"
+input\Prot_001,Time to response (TTR) is defined as the time from the date of first dose to the date of first documented response of CR or PR,objectives-endpoints-section,secondary-objective,efficacy-objective,Time to response
+input\Prot_001,"The duration of response (DOR) applies only to patients whose best response was PR or CR. The duration of response is defined as the time from the first documented response to the date first documented disease progression or relapse or death due to any cause. The duration of response will be summarized descriptively for each tumor cohort.
+",objectives-endpoints-section,secondary-objective,efficacy-objective,Duration of response
+input\Prot_001,"Time to progression (TTP) is defined as the time from the date of first dose to the date of first documented disease progression or relapse.
+",objectives-endpoints-section,secondary-objective,efficacy-objective,Time to progression
+input\Prot_001,"Progression free survival (PFS) is defined as the time from the date of first dose to the date of first documented disease progression or relapse or death due to any cause.
+",objectives-endpoints-section,secondary-objective,efficacy-objective,Progression free survival
+input\Prot_001,Assess ORR by RECIST 1.1 in solid tumors,objectives-endpoints-section,secondary-objective,efficacy-objective,ORR
+input\Prot_002,Part 1: To evaluate the pharmacokinetic (PK) profile of Trilaciclib in patients with extensive stage small cell lung cancer,objectives-endpoints-section,primary-objective,,Pharmacokinetic profile
+input\Prot_002,To evaluate the pharmacokinetic (PK) profile of Trilaciclib in patients with extensive stage small cell lung cancer;,objectives-endpoints-section,primary-objective,pharmacokinetic-objective,Pharmacokinetic profile
+input\Prot_002,"To evaluate the safety and tolerability of Trilaciclib in patients with extensive stage small
+cell lung cancer",objectives-endpoints-section,primary-objective,safety-and-tolerability-objective,"Safety, tolerability"
+input\Prot_002,"PK profile (Cmax, AUC and other PK parameters)",objectives-endpoints-section,primary-objective,pharmacokinetic-objective,PK profile
+input\Prot_002,Duration of severe neutropenia in Cycle 1 (DSN);,objectives-endpoints-section,primary-objective,efficacy-objective,Duration of severe neutropenia
+input\Prot_002,"Safety and tolerability: adverse events, laboratory abnormalities, etc.",objectives-endpoints-section,primary-objective,safety-and-tolerability-objective,Safety and tolerability

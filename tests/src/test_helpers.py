@@ -1,6 +1,6 @@
 import pytest
 
-from src.sections import matching_section, section_pages
+from src.helpers import matching_section
 
 @pytest.fixture()
 def section_examples():
@@ -77,20 +77,3 @@ def test_matching_section(section_examples,example):
     expected = example_case[1]
     predictions = [matching_section(section) for section in sections]
     assert predictions == expected
-
-@pytest.mark.parametrize(
-    "example",
-    [
-        "oe_lvl_1",
-        "o_lvl1_e",
-        "o_noe",
-        "e_noo",
-        "no_sections"
-    ]
-)
-def test_section_pages(section_examples, example):
-    example_case = section_examples(example)
-    sections = example_case[0]
-    expected_pages = example_case[2]
-    matched_pages = section_pages(sections)
-    assert matched_pages == expected_pages

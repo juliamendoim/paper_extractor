@@ -1,0 +1,13 @@
+pytest==6.2.5
+langchain
+langchain_community
+openai
+fastapi
+uvicorn
+pymupdf
+pytesseract
+scikit-learn
+matplotlib
+seaborn
+numpy
+pytest
