@@ -1,20 +1,8 @@
-import logging
 
 from src.data_models import LLMOutput
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler()
-    ]
-)
-
-logger = logging.getLogger(__name__)
 
 
 parser = JsonOutputParser(pydantic_object=LLMOutput)
@@ -32,5 +20,4 @@ prompt_template = PromptTemplate(
         {text}
     """),
     partial_variables={"format_instructions": parser.get_format_instructions()},
-
 )
