@@ -1,74 +1,83 @@
-# Thought process
 
-Create an endpoint that takes a folder with pdf papers and returns a structured file with objectives and endpoints of each paper.
+# PDF Processing App
 
-## PDF Processing
-1. Use a PDF python library that can handle the table of content. 
-2. Use regex to extract the pages corresponding to titles that contain the keywords "objectives" and "endpoints"
-3. Extract the content of these pages only, keeping in mind that original structure is key to solve the extraction, so consecutive pages should be kept in a continuous text.
+This application processes PDF files to extract objectives and endpoints, and saves the structured data to a CSV file.
 
-## LLM call
+## Requirements
 
+Ensure you have the required dependencies installed. You can install them using the `requirements.txt` file:
 
-4. Build a prompt that explains the task, adds the provided examples as few shot examples, and sends consecutively the pages.
-5. Query an LLM service such as OpenAI or Anthropic
-6. For better results, send three consecutive queries:
-    - one for extracting the text of each statement
-    - one for assigning labels (section levels) for each statement extracted
-    - one for extracting the outcome meassure for each statement extracted
+```sh
+pip install -r requirements.txt
+```
 
-## DF and saving to file
+## Running the App
 
+1. **Set up the environment:**
 
-7. Structure results in a pandas DF
-8. Save DF to a file
+   Create an `.env` file in the root directory and add the  variable `OPENAI_API_KEY` with the value of your OpenAI api key.
 
-## Alternative Paths and Possible Issues
+2. **Start the FastAPI server:**
 
+   Run the following command to start the server:
 
-### 1. PDF is corrupt and the library can not parse de TOC
-#### Solution: 
+   ```sh
+   uvicorn app:app --reload
+   ```
 
-- Use an OCR and parse the TOC using regex
+3. **Access the API:**
 
-    #### Caveats: 
+   Open your browser and go to `http://127.0.0.1:8000/docs` to access the Swagger UI where you can interact with the API.
 
-    - OCRs like Tesseract use a dpi parameter that is strongly dependant on each image, resulting in poor generalization. 
-    - OCRs are slow
-    - Poor general result that can lead to poor extraction with regex
+   Or run `client.py` from a terminal with python.
 
+## API Endpoints
 
-### 2. The words "objectives" and "endpoints" appear in unexpected contexts leading to wrong results. 
+### Extract Objectives and Endpoints
 
-#### Solution:
+- **URL:** `/extract_objectives_and_endpoints`
+- **Method:** `POST`
+- **Summary:** Processes PDF files into a structured CSV output.
+- **Parameters:**
+  - `input_folder` (str): Path to the folder containing PDF files. Default is `"input"`.
 
-- Use an LLM to make sure the pieces of information are correct.
+- **Response:**
+  - `dict`: A message indicating the output file path.
 
-#### Solution 2: 
+Example request:
 
-- Improve the regex
+```sh
+curl -X POST "http://127.0.0.1:8000/extract_objectives_and_endpoints" -H "accept: application/json" -d ""
+```
 
-### 3. Limitations in LLM calls because of privacy or budget:
+## Project Structure
 
-#### Solution: 
-- Run a local LLM
+```
+app.py
+client.py
+input/
+notebooks/
+    data.csv
+    evaluation.ipynb
+    output.csv
+    test_data.csv
+    training.ipynb
+output/
+README.md
+requirements.txt
+src/
+    data_models.py
+    helpers.py
+    llm.py
+    pdf_process.py
+    pdf_structure.py
+    prompt.py
+tests/
+    src/
+        test_helpers.py
+```
 
-    #### Caveats: 
+## Notes
 
-    - Local LLMs are slow and take up much space
-
-    - Faster local LLMs have poor results
-
-#### Solution 2: 
-- Use a classification model to assign levels and a NER model to extract the outcome meassue
-
-    #### Caveats: 
-    - Annotated Data is needed
-
-#### Solution 3: 
-
-- Extract information purely based on regex
-
-    #### Caveats: 
-
-    - Insanely specific for each case
+- Ensure the `input` folder contains the PDF files you want to process.
+- The structured data will be saved in the `output` folder as `output.csv`.
