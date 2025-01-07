@@ -8,8 +8,6 @@ Create an endpoint that takes a folder with pdf papers and returns a structured 
 3. Extract the content of these pages only, keeping in mind that original structure is key to solve the extraction, so consecutive pages should be kept in a continuous text.
 
 ## LLM call
-
-
 4. Build a prompt that explains the task, adds the provided examples as few shot examples, and sends consecutively the pages.
 5. Query an LLM service such as OpenAI or Anthropic
 6. For better results, send three consecutive queries:
@@ -18,8 +16,6 @@ Create an endpoint that takes a folder with pdf papers and returns a structured 
     - one for extracting the outcome meassure for each statement extracted
 
 ## DF and saving to file
-
-
 7. Structure results in a pandas DF
 8. Save DF to a file
 
