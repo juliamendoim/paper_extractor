@@ -122,9 +122,6 @@ def extract_objectives_and_endpoints(input_folder: str = "input") -> Dict[str, s
         
         return {
             "message": f"Saved to CSV at {output_file}",
-            "processed_files": processed_files,
-            "failed_files": failed_files,
-            "total_files": total_files
         }
 
     except Exception as e:
